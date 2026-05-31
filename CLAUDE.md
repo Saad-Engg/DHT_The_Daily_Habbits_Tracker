@@ -2,6 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Workflow: feature branches, commit and push regularly
+
+**Never commit directly to `master`.** Always create a feature branch off `master` first, and do all work there. The goal is a continuous backup so we can always roll back if something goes wrong.
+
+1. Branch from `master` before starting work: `git checkout master && git pull && git checkout -b <descriptive-branch-name>`.
+2. Commit every change with a clear message explaining *what* changed and *why*.
+3. Push the feature branch to the remote regularly so the work is backed up off-machine.
+4. Open a PR to merge into `master` when the work is ready.
+
+Prefer small, frequent commits over large batched ones. Use `gh` (at `"C:\Program Files\GitHub CLI\gh.exe"`) for GitHub operations if it isn't on `PATH`.
+
 ## Commands
 
 ```bash
